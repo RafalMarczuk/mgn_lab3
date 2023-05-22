@@ -1,0 +1,198 @@
+// class version 55.0 (55)
+// access flags 0x31
+public final class MainKt {
+
+  // compiled from: Main.kt
+
+  @Lkotlin/Metadata;(mv={1, 8, 0}, k=2, xi=48, d1={"\u0000\u0010\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0015\n\u0002\u0008\u0002\u001a\u000e\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003\u001a\u0006\u0010\u0004\u001a\u00020\u0001\u00a8\u0006\u0005"}, d2={"bubbleSort", "", "arr", "", "main", "kotlin_mng_lab3"})
+
+  // access flags 0x19
+  public final static bubbleSort([I)V
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+   L0
+    ALOAD 0
+    LDC "arr"
+    INVOKESTATIC kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
+   L1
+    LINENUMBER 4 L1 //tego nie bylo w javie
+    ALOAD 0
+    ARRAYLENGTH
+    ISTORE 1
+   L2
+    LINENUMBER 5 L2 //nie bylo w javie
+    ICONST_0
+    ISTORE 2
+   L3	//brak iload_2
+    ILOAD 1
+    ICONST_1
+    ISUB	//pominiecie if_icmpge oraz iconst_0
+    ISTORE 3
+   L4
+   FRAME APPEND [I I I] //nie bylo w javie
+    ILOAD 2 //brakuje iload_1, dodatkowo 2 i 3 maja zamieniona kolejnosc wykonania
+    ILOAD 3
+    IF_ICMPGE L5 //brak linijek isub, iconst_1 isub
+   L6
+    LINENUMBER 6 L6 //tego nie bylo
+    ICONST_0 //brakuje kilku linijek z kodu pisanego w javie
+    ISTORE 4	//dalsza czesc bytecodu rozni sie zupelnie i jest go wiecej niz w kodzie javowym
+   L7
+    ILOAD 1
+    ILOAD 2
+    ISUB
+    ICONST_1
+    ISUB
+    ISTORE 5
+   L8
+   FRAME APPEND [I I]
+    ILOAD 4
+    ILOAD 5
+    IF_ICMPGE L9
+   L10
+    LINENUMBER 7 L10
+    ALOAD 0
+    ILOAD 4
+    IALOAD
+    ALOAD 0
+    ILOAD 4
+    ICONST_1
+    IADD
+    IALOAD
+    IF_ICMPLE L11
+   L12
+    LINENUMBER 8 L12
+    ALOAD 0
+    ILOAD 4
+    IALOAD
+    ISTORE 6
+   L13
+    LINENUMBER 9 L13
+    ALOAD 0
+    ILOAD 4
+    ALOAD 0
+    ILOAD 4
+    ICONST_1
+    IADD
+    IALOAD
+    IASTORE
+   L14
+    LINENUMBER 10 L14
+    ALOAD 0
+    ILOAD 4
+    ICONST_1
+    IADD
+    ILOAD 6
+    IASTORE
+   L11
+    LINENUMBER 6 L11
+   FRAME SAME
+    IINC 4 1
+    GOTO L8
+   L9
+    LINENUMBER 5 L9
+   FRAME SAME
+    IINC 2 1
+    GOTO L4
+   L5
+    LINENUMBER 14 L5
+   FRAME CHOP 2
+    RETURN
+   L15
+    LOCALVARIABLE temp I L13 L11 6
+    LOCALVARIABLE j I L7 L9 4
+    LOCALVARIABLE i I L3 L5 2
+    LOCALVARIABLE size I L2 L15 1
+    LOCALVARIABLE arr [I L0 L15 0
+    MAXSTACK = 5
+    MAXLOCALS = 7
+
+  // access flags 0x19
+  public final static main()V
+   L0
+    LINENUMBER 18 L0
+    BIPUSH 8
+    NEWARRAY T_INT
+    ASTORE 1
+    ALOAD 1
+    ICONST_0
+    ICONST_4
+    IASTORE
+    ALOAD 1
+    ICONST_1
+    ICONST_3
+    IASTORE
+    ALOAD 1
+    ICONST_2
+    BIPUSH 7
+    IASTORE
+    ALOAD 1
+    ICONST_3
+    BIPUSH 8
+    IASTORE
+    ALOAD 1
+    ICONST_4
+    BIPUSH 53
+    IASTORE
+    ALOAD 1
+    ICONST_5
+    BIPUSH 6
+    IASTORE
+    ALOAD 1
+    BIPUSH 6
+    ICONST_5
+    IASTORE
+    ALOAD 1
+    BIPUSH 7
+    ICONST_2
+    IASTORE
+    ALOAD 1
+    ASTORE 0
+   L1
+    LINENUMBER 19 L1
+    ALOAD 0
+    INVOKESTATIC java/util/Arrays.toString ([I)Ljava/lang/String;
+    INVOKEDYNAMIC makeConcatWithConstants(Ljava/lang/String;)Ljava/lang/String; [
+      // handle kind 0x6 : INVOKESTATIC
+      java/lang/invoke/StringConcatFactory.makeConcatWithConstants(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+      // arguments:
+      "Nieposortowana tablica: \u0001"
+    ]
+    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    SWAP
+    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
+   L2
+    LINENUMBER 20 L2
+    ALOAD 0
+    INVOKESTATIC MainKt.bubbleSort ([I)V
+   L3
+    LINENUMBER 21 L3
+    ALOAD 0
+    INVOKESTATIC java/util/Arrays.toString ([I)Ljava/lang/String;
+    INVOKEDYNAMIC makeConcatWithConstants(Ljava/lang/String;)Ljava/lang/String; [
+      // handle kind 0x6 : INVOKESTATIC
+      java/lang/invoke/StringConcatFactory.makeConcatWithConstants(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+      // arguments:
+      "Posortowana tablica: \u0001"
+    ]
+    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    SWAP
+    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
+   L4
+    LINENUMBER 22 L4
+    RETURN
+   L5
+    LOCALVARIABLE arr [I L1 L5 0
+    MAXSTACK = 3
+    MAXLOCALS = 2
+
+  // access flags 0x1009
+  public static synthetic main([Ljava/lang/String;)V
+   L0
+    INVOKESTATIC MainKt.main ()V
+    RETURN
+   L1
+    LOCALVARIABLE args [Ljava/lang/String; L0 L1 0
+    MAXSTACK = 0
+    MAXLOCALS = 1
+}
